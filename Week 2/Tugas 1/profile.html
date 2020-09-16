@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Information</title>
+</head>
+<body>
+    <div style="overflow:auto">
+        <div class="card">
+            <img src="myself.jpeg" alt="El" style="width:246px" border="2">
+            <h1>El Primo Gemilang</h1>
+            <p class="title"><b>Mahasiswa</b></p>
+            <p class="description">Teknik Informatika</p>
+            <p style="cutout">Universitas Tarumanagara</p>
+            <a href="https://github.com/elprimo535180046/C_webprog_535180046" target="_blank">
+                <img src="github.svg" alt="Github" style="width:30px">
+            </a>
+            <a href="https://www.instagram.com/emimo11/" target="_blank">
+                <img src="instagram.svg" alt="Instagram" style="width:30px">
+            </a>
+            <a href="mailto:elprimo.535180046@stu.untar.ac.id">
+                <img src="mail.svg" alt="Mail" style="width:30px">
+            </a>
+            <p><button onclick="showPhone()">Contact Number</button></p>
+            <div id="mePhone" hidden>
+                +62-858-1467-1000
+            </div>
+          </div>
+    </div>
+
+    <script>
+        function showPhone(){
+            var element = document.getElementById("mePhone");
+            if (element.style.display === "none"){
+                element.style.display = "block";
+            }
+            else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
