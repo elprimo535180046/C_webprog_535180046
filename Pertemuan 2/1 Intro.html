@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro CSS</title>
+    <!-- Ada 3 tipe script untuk CSS:
+        1. Inline Style Sheet
+        2. Embedded Style Sheet
+        3. External Style Sheet -->
+
+    <!-- Berikut ini cara menggunakan External Style Sheet.
+    Panggil style.css kita menggunakan tag link, kemudian
+    kita dapat mengatur stylenya dalam file style.css kita. -->
+    <link rel="stylesheet" href="1 style.css">
+    
+    
+    <!-- Penulisan Embedded Style Sheet biasanya diletakkan di tag head seperti berikut: -->
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Kali ini kita akan belajar mengenai basic pada CSS (Cascading Style Sheet). Silahkan inspect element.</p>
+    <hr>
+
+    <!-- Ini adalah contoh untuk penulisan secara Inline Style Sheet. -->
+    <p style="color:red">Perhatikan baik baik, bahwa tulisan ini menggunakan Inline Style Sheet untuk mengatur stylenya.</p><hr>
+    <h1>Untuk penulisan h1 ini, menggunakan Embedded Style Sheet.</h1><hr>
+    <h2>Ini penulisan menggunakan External Style Sheet. Pada file css, tag ini hanya diatur warnanya saja</h2>
+    <h2 class="contoh">Sementara untuk tag ini diatur ukurannya, karena tag h2 ini mempunyai class "contoh"</h2>
+</body>
+</html>

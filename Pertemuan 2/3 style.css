@@ -1,0 +1,35 @@
+h1.merah {
+    color: red;
+}
+
+h2.warna {
+    color: #0000ff;
+}
+
+h3.rgb {
+    color: rgb(255,255,0);
+}
+
+h4.hsl {
+    color: hsl(248,53%,58%);
+}
+
+h5.left {
+    text-align: left;
+}
+
+h6.right {
+    text-align: right;
+}
+
+p.underline {
+    text-decoration: underline;
+}
+
+p.overline {
+    text-decoration: overline;
+}
+
+p.line-through {
+    text-decoration: line-through;
+}

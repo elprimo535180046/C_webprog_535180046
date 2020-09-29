@@ -1,0 +1,9 @@
+/* Penulisan style disini hanya perlu mengisi selector maupun classnya. */
+
+h2 {
+    color: green;
+}
+
+h2.contoh {
+    font-size: 36px;
+}

@@ -1,0 +1,46 @@
+p.sans-serif {
+    font-family: arial, verdana, san-serif;
+}
+
+p.serif {
+    font-family: times, "times new roman", serif;
+}
+
+p.monospace {
+    font-family: courier, "courier new", monospace;
+}
+
+p.satu {
+    font-size: xx-small;
+}
+
+p.dua {
+    font-size: 12px;
+}
+
+p.tiga {
+    font-size:3pc;
+}
+
+p.empat {
+    font-size:70%;
+}
+
+h1 {
+    font-style: normal;
+}
+
+h2 {
+    font-style: italic;
+}
+
+h3 {
+    font-style: oblique;
+}
+
+p.lime {
+    font-variant: normal;
+}
+span.smallcaps {
+    font-variant: small-caps;
+}
