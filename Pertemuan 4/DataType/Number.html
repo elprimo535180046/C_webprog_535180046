@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType Intro</title>
+
+    <script>
+        function ChangeContent(id, num) {
+            var x;
+            x = 3;
+            var res = num + x;
+            document.getElementById(id).innerHTML = "3 + " + num + " = " + res;
+            document.getElementById(id).innerHTML = "3 + " + num + " = " + num + 3;
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick='ChangeContent("cLine1", 500)'>Go</button>
+    <p id="cLine1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet ultrices iaculis.</p>
+</body>
+</html>

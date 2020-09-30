@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Intro</title>
+    <script>
+
+        var Person = {
+            Email: "",
+            NIM: "",
+            Nama: "",
+            Umur: ""
+        }
+
+        function CreateObject(pEmail, pNIM, pNama, pUmur) {
+            Person.Email = pEmail;
+            Person.NIM = pNIM;
+            Person.Nama = pNama;
+            Person.Umur = pUmur;
+        }
+
+        function LoadObject() {
+            document.getElementById("iPerson").value =
+                "Email: " + Person.Email + " " +
+                "NIM: " + Person.NIM + " " +
+                "Nama: " + Person.Nama + " " +
+                "Umur: " + Person.Umur;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="iEmail" placeholder="Masukkan Email" />
+    <input type="text" id="iNIM" placeholder="Masukkan NIM" />
+    <input type="text" id="iName" placeholder="Masukkan Nama" />
+    <input type="text" id="iAge" placeholder="Masukkan Umur" />
+
+    <button type="button"
+        onclick='CreateObject(document.getElementById("iEmail").value, document.getElementById("iNIM").value, document.getElementById("iName").value, document.getElementById("iAge").value)'>Create</button>
+
+    <br><br>
+
+    <button type="button" onclick='LoadObject()'>Load</button>
+
+    <input type="text" id="iPerson" style="width: 550px;" readonly />
+</body>
+</html>

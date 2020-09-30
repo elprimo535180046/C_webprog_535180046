@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invocation Intro</title>
+    <script>
+        var Person = {
+            Email: "",
+            NIM: "",
+            Nama: "",
+            Umur: "",
+            Foods: [],
+
+            AddBio: function(w,x,y,z){
+                this.Email=w;
+                this.NIM=x;
+                this.Nama=y;
+                this.Umur=z;
+            },
+
+            AddFoods: function(temp){
+                this.Foods.push(temp);
+            },
+
+            Write: function(){
+                var str = "Bio: " + this.Email + ", " + this.NIM + ", " + this.Nama + ", " + this.Umur;
+                var food = "Favourite Foods: ";
+                var item;
+                for (item of this.Foods){
+                    food += item + " ";
+                }
+                return str + " " + food;
+            }
+        }
+
+        function pushInfo(w,x,y,z){
+            Person.AddBio(w,x,y,z);
+        }
+
+        function pushFood(temp) {
+            Person.AddFoods(temp);
+        }
+
+        function LoadObject() {
+            document.getElementById("res").innerHTML = Person.Write();
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="box1" placeholder="Masukkan Email" />
+    <input type="text" id="box2" placeholder="Masukkan NIM" />
+    <input type="text" id="box3" placeholder="Masukkan Nama" />
+    <input type="text" id="box4" placeholder="Masukkan Umur" />
+
+    <button type="button"
+        onclick='pushInfo(document.getElementById("box1").value, document.getElementById("box2").value, document.getElementById("box3").value, document.getElementById("box4").value)'>Add info</button>
+    <br><br>
+
+    <input type="text" id="box5" placeholder="Masukkan makanan favorit" style="width: 250px;">
+    <button type="button" onclick='pushFood(document.getElementById("box5").value)'>Add food</button>
+
+    <br><br>
+
+    <button type="button" onclick='LoadObject()'>Lihat hasil</button>
+    <div id="res">
+
+    </div>
+</body>
+</html>

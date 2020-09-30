@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invocation Intro</title>
+    <script>
+        function base() {
+            this.value = "Boo!";
+        }
+        var child = new base(); // Contructor invocation
+
+    </script>
+</head>
+<body>
+    <button type="button" onclick='document.getElementById("oResult").innerHTML=child.value;'>Press me</button>
+
+    <br><br>
+
+    <p id="oResult"></p>
+</body>
+</html>

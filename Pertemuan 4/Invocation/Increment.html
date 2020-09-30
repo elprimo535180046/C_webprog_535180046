@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invocation Intro</title>
+    <script>
+        var obj = {
+            value: 0,
+            increment: function () { // Method
+                this.value += 1;
+            }
+        };
+        function addmore() {
+            obj.increment();
+        }
+        function Show() {
+            document.getElementById("oResult").innerHTML = obj.value;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick='addmore()'>Click to add more</button>
+    <br><br>
+    <button type="button" onclick='Show()'>Show</button>
+    <p id="oResult"></p>
+</body>
+</html>

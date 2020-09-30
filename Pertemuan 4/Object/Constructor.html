@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Intro</title>
+    <script>
+
+        var Me;
+
+        function Person(pEmail, pNIM, pNama, pUmur){
+            this.Email = pEmail;
+            this.NIM = pNIM;
+            this.Nama = pNama;
+            this.Umur = pUmur;
+
+            this.ValidasiData =  function(){
+                if ((this.Email != "") && (this.NIM != "") && (this.Nama != "") && (this.Umur != "")) {
+                    return "OK";
+                } else {
+                    return "Missing data!";
+                }
+
+            }
+        }
+
+        function CreateObject(pEmail, pNIM, pNama, pUmur) {
+            Me = new Person(pEmail, pNIM, pNama, pUmur);
+        }
+
+        function LoadObject() {
+            document.getElementById("iPerson").value =
+                "Email: " + Me.Email + " " +
+                "NIM: " + Me.NIM + " " +
+                "Nama: " + Me.Nama + " " +
+                "Umur: " + Me.Umur + " " +
+                "Validasi: " + Me.ValidasiData();
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="iEmail" placeholder="Masukkan Email" />
+    <input type="text" id="iNIM" placeholder="Masukkan NIM" />
+    <input type="text" id="iName" placeholder="Masukkan Nama" />
+    <input type="text" id="iAge" placeholder="Masukkan Umur" />
+
+    <button type="button"
+        onclick='CreateObject(document.getElementById("iEmail").value, document.getElementById("iNIM").value, document.getElementById("iName").value, document.getElementById("iAge").value)'>Create</button>
+    <br><br>
+
+    <button type="button" onclick='LoadObject()'>Load</button>
+
+    <input type="text" id="iPerson" style="width: 550px;" readonly />
+</body>
+</html>

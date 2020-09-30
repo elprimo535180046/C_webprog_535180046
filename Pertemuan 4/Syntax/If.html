@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Intro</title>
+    <script>
+
+        var foods = [];
+
+        function AddFood(pFood) {
+            if (foods.length == 10) {
+                alert("Too many food! :(");
+            }
+            else if (foods.length < 5 && pFood.length < 3) {
+                alert("What is this food??");
+            }
+            else {
+                foods.push(pFood);
+                document.getElementById("iFood").value = "";
+                document.getElementById("iFood").focus();
+            }
+        }
+
+        function InLoop() {
+            var item;
+            for (item of foods) {
+                document.getElementById("oResult").innerHTML += item + "<br />";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="iFood" placeholder="Add your favourite food here" style="width: 500px;">
+    <button type="button" onclick='AddFood(document.getElementById("iFood").value)'>Add</button>
+    <button type="button" onclick='InLoop()'>Show All</button>
+
+    <br><br>
+
+    <p id="oResult"></p>
+
+</body>
+</html>
