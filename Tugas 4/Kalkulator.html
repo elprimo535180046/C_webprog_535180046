@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+        function tambah(id, x, y) {
+            document.getElementById(id).value = Number(x) + Number(y);
+        }
+        function kurang(id, x, y) {
+            document.getElementById(id).value = Number(x) - Number(y);
+        }
+        function kali(id, x, y) {
+            document.getElementById(id).value = Number(x) * Number(y);
+        }
+        function bagi(id, x, y) {
+            document.getElementById(id).value = Number(x) / Number(y);
+        }
+    </script>
+</head>
+<body>
+    <p><b>Bil 1</b>
+        <input type="number" id="box1" />
+    </p>
+    <p><b>Bil 2</b>
+        <input type="number" id="box2" />
+    </p>
+    <p><b>Hasil</b>
+        <input type="number" id="oRes" readonly/>
+    </p>
+    <br>
+        <button style="height:50px;width:50px" type="button"
+        onclick='tambah("oRes", document.getElementById("box1").value , document.getElementById("box2").value)'>+</button>
+        <button style="height:50px;width:50px" type="button"
+        onclick='kurang("oRes", document.getElementById("box1").value , document.getElementById("box2").value)'>-</button>
+        <button style="height:50px;width:50px" type="button"
+        onclick='kali("oRes", document.getElementById("box1").value , document.getElementById("box2").value)'>x</button>
+        <button style="height:50px;width:50px" type="button"
+        onclick='bagi("oRes", document.getElementById("box1").value , document.getElementById("box2").value)'>/</button>
+</body>
+</html>

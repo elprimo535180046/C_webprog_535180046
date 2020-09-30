@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter</title>
+    <script>
+
+        var foods = [];
+
+        function convert(id,score) {
+            if (score <0 || score >100) {
+                return document.getElementById(id).value = "ERROR";
+            }
+            if (score >=0 && score <=40){
+                document.getElementById(id).value = "E";
+            }
+            else if (score >= 41 && score <=55) {
+                document.getElementById(id).value = "D";
+            }
+            else if (score >= 56 && score <= 70) {
+                document.getElementById(id).value = "C";
+            }
+            else if (score >= 71 && score <= 80) {
+                document.getElementById(id).value = "B";
+            }
+            else {
+                document.getElementById(id).value = "A";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="box1" placeholder="Masukkan nilai yang akan dikonversi (0-100)" style="width: 300px;">
+    <br>
+    <button type="button" onclick='convert("res",document.getElementById("box1").value)'>Konversi</button>
+    <br><br><br>
+    <p>Hasil konversi: 
+        <input type="text" id="res" readonly />
+    </p>
+    
+</body>
+</html>
