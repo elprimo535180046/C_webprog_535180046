@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Manipulasi DOM</title>
+</head>
+<body>
+    <script>
+        let div = document.createElement('div');
+
+        div.id = 'content';
+
+        div.className ='classcontent';
+
+        
+
+       div.innerHTML = '<p>Contoh Create Element</p>';
+
+       let text = document.createTextNode('Create Element menggunakan TextNode');
+        div.appendChild(text);
+
+        document.body.appendChild(div);
+
+        let btn = document.createElement('button');
+        btn.id = 'tombol';
+        document.body.appendChild(btn);
+    </script>
+</body>
+</html>

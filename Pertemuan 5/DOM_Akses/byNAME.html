@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Akses DOM</title>
+</head>
+<body>
+    <p>Masukkan gender anda:</p>
+    <p>
+        <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
+        <input type="radio" name="gender" value="Perempuan"> Perempuan
+        <input type="radio" name="gender" value="Memilih untuk tidak menjawab"> Memilih untuk tidak menjawab
+    </p>
+    <p>
+        <button id="choose">Pilih</button>
+    </p>
+    <script>
+        var btn = document.getElementById('choose');
+
+        btn.addEventListener('click', () => {
+            var genders = document.getElementsByName('gender');
+            genders.forEach((gender) => {
+                if (gender.checked) {
+                    alert(`Gender anda: ${gender.value}`);
+                }
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Akses DOM</title>
+</head>
+<body>
+    <h1>Ini adalah contoh dari akses DOM</h1>
+    <h2>Menggunakan TAG</h2>
+    <p>Ceritanya disini kamu memasukkan sebuah paragraf.</p>
+    <h2>Ini merupakan heading kedua</h2>
+    <p>Mungkin sebuah paragraf baru? Lorem Ipsum?</p>
+    <h2>Ini merupakan heading ketiga. Heading terakhir.</h2>
+    <p>Ceritanya ini paragraf terakhir. Lorem Ipsum Lorem Ipsum.</p>
+
+    <button id="count">Hitung H2</button>
+
+    <script>
+        let btn = document.getElementById('count');
+        btn.addEventListener('click',() => {
+            let heading = document.getElementsByTagName('h2');
+            alert(`Banyaknya tag H2: ${heading.length}`);
+        });
+    </script>
+</body>
+</html>
