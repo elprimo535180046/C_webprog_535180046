@@ -8,7 +8,7 @@ router.get('/',async(req,res)=>{
         res.redirect('/auth/login');
     }
     else{
-        res.send('ok');
+        res.render('pages/index');
     }
 });
 
