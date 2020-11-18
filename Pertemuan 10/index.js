@@ -2,6 +2,7 @@ const express = require('express');
 const parser = require('body-parser');
 const session = require('express-session');
 const layouts = require('express-ejs-layouts');
+const todo = require('./routes/todo');
 
 const app = express();
 
@@ -27,6 +28,9 @@ app.use(session({
     secret: 'some_secret_key',
     cookie: {}
 }));
+
+//Using TODO
+app.use('/todo',todo);
 
 //Start routing
 const index = require('./routes/index');
